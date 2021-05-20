@@ -2,6 +2,7 @@ package com.ajay;
 
 import javax.lang.model.element.NestingKind;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -10,6 +11,10 @@ public class MapsExample {
     public static void main(String[] args) {
         Map<String, Integer> hashMap = new HashMap<>();
         TreeMap<Integer, String> treeMap = new TreeMap<>();
+        Hashtable<Integer, String> hashTable = new Hashtable<>();
+
+        //HashTable Example
+
 
         //TreeMap Example
         treeMap.put(1,"c");
@@ -33,6 +38,12 @@ public class MapsExample {
 
         for(String key : hashMap.keySet()){
             System.out.println("Key:\""+ key +"\" " + "Value:"+hashMap.get(key));
+        }
+
+        System.out.println("========================================");
+
+        for(Map.Entry<String, Integer> e: hashMap.entrySet()){
+            System.out.println("Key:\""+ e.getKey() +"\" " + "Value:"+ e.getValue());
         }
 
     }
